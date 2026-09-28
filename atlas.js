@@ -22,7 +22,7 @@ const territories = [
   {id:'workspace',num:'I',name:'The Workspace',tag:'Navigate · Arrange · Mix · Save',color:'var(--brass)'},
   {id:'clips',num:'II',name:'Clips',tag:'Record · Notes · Audio',color:'var(--steel)'},
   {id:'devices',num:'III',name:'Devices',tag:'Instruments · Effects · Racks',color:'var(--bone)'},
-  {id:'history',num:'IV',name:'Live’s History',tag:'People · Design · Development',color:'var(--crimson)'}
+  {id:'history',num:'IV',name:'History',tag:'People · Design · Development',color:'var(--crimson)'}
 ];
 const entries = new Map();
 function entry(id,view,title,body,source,extra={}) { const e={id,view,title,body,source,...extra}; entries.set(id,e);return e; }

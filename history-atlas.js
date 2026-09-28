@@ -90,7 +90,7 @@ const historyAtlas=(()=>{
         return `<li><a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.title)} ↗</a><span>${esc(s.kind)}${s.date?' · '+esc(s.date):''}</span>${s.note?`<p>${esc(s.note)}</p>`:''}</li>`;
       }).join('')}</ul></section>
       <div class="history-card-footer">${ctx.flagHTML(c.id)}<span>${esc(p.label)}</span></div>
-      <nav class="history-adjacent" aria-label="Cards in Live’s History">${step(route.previous,'previous')}${step(route.next,'next')}</nav>
+      <nav class="history-adjacent" aria-label="Cards in History">${step(route.previous,'previous')}${step(route.next,'next')}</nav>
       </article>`;
   }
   function mount(host,entry,ctx){currentId=entry.id;host.innerHTML=render(entry.id,ctx);host.scrollTop=0;}

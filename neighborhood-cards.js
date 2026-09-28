@@ -68,7 +68,7 @@ const neighborhoodCards=(()=>{
   function breadcrumb(entry,esc){
     const route=adjacent(entry.view,entry.id);if(!route)return '';
     const {group,previous,next}=route;
-    const section=entry.view==='history'?'Live’s History':entry.view[0].toUpperCase()+entry.view.slice(1);
+    const section=entry.view==='history'?'History':entry.view[0].toUpperCase()+entry.view.slice(1);
     const step=(choice,direction)=>{
       const label=direction==='previous'?'Previous':'Next';
       const title=choice?`${label} card: ${choice.label}`:`${direction==='previous'?'First':'Last'} card in ${section}`;
