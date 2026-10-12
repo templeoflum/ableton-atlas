@@ -287,14 +287,14 @@ const historyImagesData=(()=>{
   archive('live-five','live-5-warp',5,120,'Auto-Warp','The Live 5.2 sample editor with Warp markers over a long audio recording.',588,212,12811);
   archive('live-six','live-6-rack',6,207,'An Audio Effect Rack','Live 6’s Audio Effect Rack with Macro controls, parallel chains and its effects.',752,194,73769);
   archive('sampler-history','live-6-sampler',6,314,'Sampler’s key zones','Sampler’s original key-zone editor showing samples distributed across a keyboard.',731,178,55650);
-  // Live 7 p. 227 is located, but its embedded bitmap needs the PDF's vertical
-  // transform applied before use. Keep that extraction out of the active page.
+  // /Im284's /Im0 uses [831 0 0 -194 43.5 196.75]: preserve its display orientation.
+  archive('live-seven','live-7-drum-rack-oriented',7,229,'Drum Rack’s chain list','Live 7’s Drum Rack with pads, chain routing, mixer controls and return chains.',831,194,100209);
+  Object.assign(figures[figures.length-1],{pdfDisplayTransform:'flip-vertical',checked:'2026-09-28'});
   archive('instrument-partners','live-7-tension',7,379,'Tension','The Tension instrument in Live 7, with its string-modeling controls.',659,192,41447);
   archive('live-eight','live-8-looper',8,311,'Looper','Live 8’s Looper device with its loop display, transport controls and feedback knob.',388,192,24894);
   // Explicit research gaps, not slots to pad with later interfaces or unrelated
   // photos. These cards stay readable without a decorative fallback.
   const gaps={
-    'live-seven':'Located Live 7.0.9 manual PDF p. 229 (printed p. 227), image 0; raw extraction is vertically inverted. Apply the PDF transform and visually verify before placing.',
     'live-one-five':'Need a verified Live 1.5 / 2002 connection artifact.',
     'live-two':'Need a verified Live 2 crossfader or recording screenshot.',
     'training-history':'Need a photograph from the 2008–09 program; the current Push photo is not period-correct.',
